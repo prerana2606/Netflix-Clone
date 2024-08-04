@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+}
+
+body>img {
+    position: absolute;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding-top: 7em;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.main::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("bgimg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+
+.box {
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    width:100%; /* Adjusted for better responsiveness */
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 5vh;
+}
+
+form h1 {
+    color: white;
+    font-size: 2.5em;
+    text-align: left;
+}
+
+form {
+    margin-top: 20px;
+    padding: 48px 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(18, 12, 12, 0.444);
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    border-radius: 5px;
+}
+
+.fgt a {
+    text-decoration: none;
+    color: white;
+}
+.fgt {
+    padding: 10px;
+}
+
+.txt2 {
+    text-align: left;
+    color: rgb(133, 122, 122);
+    padding: 7px 0px;
+}
+
+.txt2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.txt3 {
+    text-align: left;
+    color: rgb(133, 122, 122);
+    font-size: small;
+    padding: 7px 0px;
+}
+
+.txt3 a {
+    color: blue;
+    text-decoration: none;
+}
+
+footer {
+    color: gray;
+    padding: 20vh 30vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
+
+.grid a {
+    color: gray;
+    padding: 10px 0px;
+}
+
+select {
+    background-color: rgba(109, 90, 90, 0.208);
+    color: white;
+    padding: 10px 25px;
+    margin: 20px 0px;
+}
+
+
+@media (max-width: 768px) {
+    body>img {
+        width: 200px; 
+    }
+
+    .box {
+        width: 90%; 
+        padding: 20px; 
+    }
+
+    form {
+        padding: 20px 30px; 
+    }
+
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    footer {
+        padding: 10vh 10vh; 
+    }
+}
+
+@media (max-width: 480px) {
+    body>img {
+        width: 200px;
+    }
+
+    .box {
+        width: 100%; 
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    footer {
+        padding: 5vh 5vh; 
+    }
+}
